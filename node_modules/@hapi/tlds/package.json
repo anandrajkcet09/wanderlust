@@ -1,7 +1,7 @@
 {
     "name": "@hapi/tlds",
     "description": "TLDS list for domain validation",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "repository": "git://github.com/hapijs/tlds",
     "type": "module",
     "tshy": {
