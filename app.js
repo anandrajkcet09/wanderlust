@@ -1,5 +1,5 @@
-if(process.env.NODE_ENV != "production"){
-    require("dotenv").config();
+if (process.env.NODE_ENV != "production") {
+    require('dotenv').config({ quiet: true });
 }
 
 const express = require("express");
@@ -44,13 +44,13 @@ app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 const sessionOptions = {
-    secret : "mysupersecretcode",
-    resave : false,
-    saveUninitialized : true,
+    secret: "mysupersecretcode",
+    resave: false,
+    saveUninitialized: true,
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
-        maxAge : 7 * 24 * 60 * 60 * 1000,
-        httpOnly : true
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+        httpOnly: true
     },
 }
 
